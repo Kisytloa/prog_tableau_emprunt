@@ -1,0 +1,21 @@
+```text
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# IDE / Editeurs de code
+.vscode/
+.idea/
+*.swp
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dossiers de dépendances (si vous en ajoutez plus tard)
+node_modules/
+dist/
+build/

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Tableau d'Amortissement</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <h1>Simulateur d'Emprunt Bancaire</h1>
+        
+        <div class="grid">
+            <div class="input-group">
+                <label for="capital">Montant du prêt (€)</label>
+                <input type="number" id="capital" value="100000" step="1000">
+            </div>
+            
+            <div class="input-group">
+                <label for="taux">Taux annuel (%)</label>
+                <input type="number" id="taux" value="3.5" step="0.1">
+            </div>
+            
+            <div class="input-group">
+                <label for="duree">Durée (Années)</label>
+                <input type="number" id="duree" value="15">
+            </div>
+            
+            <div class="input-group">
+                <label for="periodicite">Périodicité</label>
+                <select id="periodicite">
+                    <option value="12">Mensuelle</option>
+                    <option value="4">Trimestrielle</option>
+                    <option value="2">Semestrielle</option>
+                    <option value="1">Annuelle</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label for="methode">Mode de calcul</label>
+                <select id="methode">
+                    <option value="annuite">Annuités Constantes</option>
+                    <option value="amortissement">Amortissements Constants</option>
+                </select>
+            </div>
+        </div>
+        
+        <button id="btnCalculer">Générer le tableau d'amortissement</button>
+    </div>
+
+    <div id="resultats" class="card" style="display:none;">
+        <div class="summary" id="bilan"></div>
+        <div class="table-container">
+            <table id="tableau">
+                <thead>
+                    <tr>
+                        <th>Période</th>
+                        <th>Capital Début (1)</th>
+                        <th>Intérêts (2)</th>
+                        <th>Amortissement (3)</th>
+                        <th>Annuité (4)</th>
+                        <th>Capital Fin (5)</th>
+                    </tr>
+                </thead>
+                <tbody id="corps-tableau"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

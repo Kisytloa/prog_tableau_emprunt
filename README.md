@@ -1,5 +1,7 @@
 # 🏦 Générateur de Tableaux d'Emprunt
 
+## Auteurs : DUTILLEUL Yanis `@kissloa21` BRESSON Arthur `@ArthurBresson` DUPORT Nathan `@nathanduport`
+
 Un logiciel de simulation financière intuitif permettant de générer des tableaux d'amortissement personnalisés pour divers investissements (immobilier, véhicule, consommation).
 
 ## 🚀 Fonctionnalités

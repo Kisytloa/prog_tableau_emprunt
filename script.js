@@ -85,7 +85,6 @@ document.getElementById('btnCalculer').addEventListener('click', () => {
     document.getElementById('bilan').innerHTML = `
         <div><label>Intérêts totaux</label><div style="font-size:1.2rem; font-weight:bold">${formatMonnaie(cumulInterets)}</div></div>
         <div><label>Total à rembourser</label><div style="font-size:1.2rem; font-weight:bold">${formatMonnaie(totalVerse)}</div></div>
-        <div><label>Coût du crédit</label><div style="font-size:1.2rem; font-weight:bold">${((cumulInterets/capital)*100).toFixed(2)}%</div></div>
     `;
 
     // Génération du tableau

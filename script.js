@@ -26,7 +26,6 @@ const calculerDonnees = (v0, tAnnuel, annees, k, methode) => {
     let lignes = [];
     let cumulInterets = 0;
 
-    // Calcul de la mensualité constante si nécessaire
     const annuiteConstante = methode === 'annuite' 
         ? v0 * (i / (1 - Math.pow(1 + i, -n))) 
         : 0;
@@ -81,13 +80,10 @@ document.getElementById('btnCalculer').addEventListener('click', () => {
 
     const { lignes, cumulInterets, totalVerse } = calculerDonnees(capital, taux, duree, k, methode);
 
-    // Mise à jour du résumé
     document.getElementById('bilan').innerHTML = `
         <div><label>Intérêts totaux</label><div style="font-size:1.2rem; font-weight:bold">${formatMonnaie(cumulInterets)}</div></div>
         <div><label>Total à rembourser</label><div style="font-size:1.2rem; font-weight:bold">${formatMonnaie(totalVerse)}</div></div>
     `;
-
-    // Génération du tableau
     let html = "";
     lignes.forEach(l => {
         html += `<tr>
@@ -99,8 +95,6 @@ document.getElementById('btnCalculer').addEventListener('click', () => {
             <td>${formatMonnaie(l.fin)}</td>
         </tr>`;
     });
-
-    // Ligne de total
     html += `<tr class="total-row">
         <td>TOTAL</td>
         <td>-</td>
